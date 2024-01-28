@@ -58,21 +58,18 @@ src: url('fonts/Montserrat-Regular.ttf') format('truetype');
   var currentHour = currentTime.getHours();
   
   if (currentHour < 12) {
-   document.write("<h1>Сценарий 1</h1>");
    <model-viewer src="Scene.glb" ar ar-scale="fixed" camera-controls touch-action="pan-y" alt="A 3D model of an astronaut" ios-src="Scene.usdz" xr-environment>
       <button slot="ar-button" id="ar-button">
         Смотреть через камеру
       </button>  
     </model-viewer>
   } else if (currentHour > 12) {
-   document.write("<h1>Сценарий 2</h1>");
    <model-viewer src="Scene1.glb" ar ar-scale="fixed" camera-controls touch-action="pan-y" alt="A 3D model of an astronaut" ios-src="Scene1.usdz" xr-environment>
       <button slot="ar-button" id="ar-button">
         Смотреть на камеру
       </button>  
     </model-viewer>
   } else {
-   document.write("<h1>Другое время</h1>");
     <model-viewer src="Scene.glb" ar ar-scale="fixed" camera-controls touch-action="pan-y" alt="A 3D model of an astronaut" ios-src="Scene.usdz" xr-environment>
       <button slot="ar-button" id="ar-button">
         Смотреть в камеру
