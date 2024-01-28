@@ -48,8 +48,20 @@ model-viewer {
 </style>
 
 <model-viewer src="Scene.glb" ar ar-scale="fixed" camera-controls touch-action="pan-y" alt="A 3D model of an astronaut" ios-src="Scene.usdz" xr-environment>
+  {
+      background-color: #FF4500;
+      border: none;
+      color: white;
+      padding: 20px 34px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      margin: 4px 2px;
+      cursor: pointer;
+      }
   <button slot="ar-button" id="ar-button">
-        Смотреть в камеры
+        Смотреть на камеры
     </button>
     
 </model-viewer>
