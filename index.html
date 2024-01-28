@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>Местное время</title>
+</head>
 <body>
 
 
@@ -48,15 +51,32 @@ src: url('fonts/Montserrat-Regular.ttf') format('truetype');
   #ar-button:focus-visible {
     outline: 2px solid #4285f4;
   }
-
 </style>
 
-<model-viewer src="Scene.glb" ar ar-scale="fixed" camera-controls touch-action="pan-y" alt="A 3D model of an astronaut" ios-src="Scene.usdz" xr-environment>
-  <button slot="ar-button" id="ar-button">
+<script>
+  var currentTime = new Date();
+  var currentHour = currentTime.getHours();
+  
+  if (currentHour > 12) {
+   document.write("<h1>Сценарий 1</h1>");
+   <model-viewer src="Scene.glb" ar ar-scale="fixed" camera-controls touch-action="pan-y" alt="A 3D model of an astronaut" ios-src="Scene.usdz" xr-environment>
+      <button slot="ar-button" id="ar-button">
         Смотреть через камеру
-    </button>
-    
-</model-viewer>
+      </button>  
+    </model-viewer>
+  } else if (currentHour < 12) {
+   document.write("<h1>Сценарий 2</h1>");
+   <model-viewer src="Scene1.glb" ar ar-scale="fixed" camera-controls touch-action="pan-y" alt="A 3D model of an astronaut" ios-src="Scene1.usdz" xr-environment>
+      <button slot="ar-button" id="ar-button">
+        Смотреть на камеру
+      </button>  
+    </model-viewer>
+  } else {
+   document.write("<h1>Другое время</h1>");
+  }
+ </script>
+
+
   
 </body>
 </html>
