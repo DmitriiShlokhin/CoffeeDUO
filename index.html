@@ -64,13 +64,13 @@ src: url('fonts/Montserrat-Regular.ttf') format('truetype');
   const currentTime = new Date();
   const currentHour = currentTime.getMinutes();
  
-  if (currentHour >= 5) {
+  if (currentHour <= 5) {
     modelViewer.src = 'Scene.glb';
     modelViewer.iosSrc = 'Scene.usdz';
-  }if (currentHour >= 10) {
+  }if (currentHour <= 10) {
     modelViewer.src = 'RED.glb';
     modelViewer.iosSrc = 'RED.usdz';
-  }if (currentHour >= 15) {
+  }if (currentHour <= 15) {
     modelViewer.src = 'BLUE.glb';
     modelViewer.iosSrc = 'BLUE.usdz';
   } else {
