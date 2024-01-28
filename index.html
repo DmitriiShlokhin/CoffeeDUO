@@ -64,16 +64,44 @@ src: url('fonts/Montserrat-Regular.ttf') format('truetype');
   const currentTime = new Date();
   const currentHour = currentTime.getMinutes();
  
-  if (currentHour <= 25) {
+  if (currentHour <= 5) {
     modelViewer.src = 'Scene.glb';
     modelViewer.iosSrc = 'Scene.usdz';
-} else if (currentHour > 25 && currentHour <= 30) {
+} else if (currentHour > 5 && currentHour <= 10) {
     modelViewer.src = 'RED.glb';
     modelViewer.iosSrc = 'RED.usdz';
-} else if (currentHour > 30 && currentHour <= 35) {
+} else if (currentHour > 10 && currentHour <= 15) {
     modelViewer.src = 'BLUE.glb';
     modelViewer.iosSrc = 'BLUE.usdz';
-} else {
+} else if (currentHour > 15 && currentHour <= 20) {
+    modelViewer.src = 'Scene.glb';
+    modelViewer.iosSrc = 'Scene.usdz';
+} else if (currentHour > 20 && currentHour <= 25) {
+    modelViewer.src = 'RED.glb';
+    modelViewer.iosSrc = 'RED.usdz';
+} else if (currentHour > 25 && currentHour <= 30) {
+    modelViewer.src = 'BLUE.glb';
+    modelViewer.iosSrc = 'BLUE.usdz';
+} else if (currentHour > 30 && currentHour <= 35) {
+    modelViewer.src = 'Scene.glb';
+    modelViewer.iosSrc = 'Scene.usdz';
+}else if (currentHour > 35 && currentHour <= 40) {
+    modelViewer.src = 'RED.glb';
+    modelViewer.iosSrc = 'RED.usdz';
+} else if (currentHour > 40 && currentHour <= 45) {
+    modelViewer.src = 'BLUE.glb';
+    modelViewer.iosSrc = 'BLUE.usdz';
+} else if (currentHour > 45 && currentHour <= 50) {
+    modelViewer.src = 'Scene.glb';
+    modelViewer.iosSrc = 'Scene.usdz';
+} else if (currentHour > 50 && currentHour <= 55) {
+    modelViewer.src = 'RED.glb';
+    modelViewer.iosSrc = 'RED.usdz';
+} else if (currentHour > 55 && currentHour <= 59) {
+    modelViewer.src = 'BLUE.glb';
+    modelViewer.iosSrc = 'BLUE.usdz';
+}
+  else {
     modelViewer.src = 'Scene2.glb';
     modelViewer.iosSrc = 'Scene2.usdz';
 }
