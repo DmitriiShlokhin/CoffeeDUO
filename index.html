@@ -52,7 +52,7 @@ src: url('fonts/Montserrat-Regular.ttf') format('truetype');
   }
 </style>
 
-<model-viewer id="model-viewer" ar ar-scale="fixed" camera-controls touch-action="pan-y" alt="A 3D model of an astronaut" ios-src="Scene.usdz" xr-environment>
+<model-viewer id="model-viewer" ar ar-scale="fixed" camera-controls touch-action="pan-y" alt="A 3D model of an astronaut">
   <button slot="ar-button" id="ar-button">
    Смотреть через камеру
   </button>  
@@ -66,8 +66,10 @@ src: url('fonts/Montserrat-Regular.ttf') format('truetype');
  
   if (currentHour < 12) {
     modelViewer.src = 'Scene.glb';
+    modelViewer.iosSrc = 'Scene.usdz';
   } else {
     modelViewer.src = 'Scene2.glb';
+    modelViewer.iosSrc = 'Scene2.usdz';
   }
 
   arButton.addEventListener('click', () => {
