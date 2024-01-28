@@ -52,23 +52,27 @@ src: url('fonts/Montserrat-Regular.ttf') format('truetype');
   }
 </style>
 
+<model-viewer id="model-viewer" ar ar-scale="fixed" camera-controls touch-action="pan-y" alt="A 3D model of an astronaut" ios-src="Scene.usdz" xr-environment>
+  <button slot="ar-button" id="ar-button">
+   Смотреть через камеру
+  </button>  
+</model-viewer>
+
 <script>
-  var currentTime = new Date();
-  var currentHour = currentTime.getHours();
+  const modelViewer = document.getElementById('model-viewer');
+  const arButton = document.getElementById('ar-button');
+  const currentTime = new Date();
+  const currentHour = currentTime.getHours();
  
   if (currentHour < 12) {
-    <model-viewer src="Scene.glb" ar ar-scale="fixed" camera-controls touch-action="pan-y" alt="A 3D model of an astronaut" ios-src="Scene.usdz" xr-environment>
-      <button slot="ar-button" id="ar-button">
-       Смотреть через камеру
-      </button>  
-    </model-viewer>
-  }else {
-    <model-viewer src="Scene2.glb" ar ar-scale="fixed" camera-controls touch-action="pan-y" alt="A 3D model of an astronaut" ios-src="Scene2.usdz" xr-environment>
-      <button slot="ar-button" id="ar-button">
-       Смотреть через камеру
-      </button>  
-    </model-viewer>
+    modelViewer.src = 'Scene.glb';
+  } else {
+    modelViewer.src = 'Scene2.glb';
   }
+
+  arButton.addEventListener('click', () => {
+    modelViewer.activateAR();
+  });
  </script>
 
 </body>
