@@ -67,10 +67,10 @@ src: url('fonts/Montserrat-Regular.ttf') format('truetype');
   if (currentHour <= 5) {
     modelViewer.src = 'Scene.glb';
     modelViewer.iosSrc = 'Scene.usdz';
-  }if (5 < currentHour <= 10) {
+  }else if (5 < currentHour <= 10) {
     modelViewer.src = 'RED.glb';
     modelViewer.iosSrc = 'RED.usdz';
-  }if (10 < currentHour <= 15) {
+  }else if (10 < currentHour <= 15) {
     modelViewer.src = 'BLUE.glb';
     modelViewer.iosSrc = 'BLUE.usdz';
   } else {
