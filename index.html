@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Все дело в людях</title>
+ <title>1Все дело в людях</title>
 </head>
 <body>
 
@@ -56,7 +56,7 @@ src: url('fonts/Montserrat-Regular.ttf') format('truetype');
   var currentTime = new Date();
   var currentHour = currentTime.getHours();
  
-  if (currentHour < 12) {
+  if (currentHour > 12) {
    document.querySelector("model-viewer").setAttribute("src", "Scene.glb");
    document.querySelector("model-viewer").setAttribute("ios-src", "Scene.usdz");
   }else {
