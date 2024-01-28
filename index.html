@@ -55,6 +55,9 @@ src: url('fonts/Montserrat-Regular.ttf') format('truetype');
 <script>
   var currentTime = new Date();
   var currentHour = currentTime.getHours();
+  const modelViewer = document.querySelector('#model-viewer');
+  const sceneUrl = 'Scene.glb';
+  modelViewer.setAttribute('src', sceneUrl);
  
   if (currentHour == 12) {
    document.querySelector("model-viewer").setAttribute(src, "Scene2.glb");
@@ -65,7 +68,7 @@ src: url('fonts/Montserrat-Regular.ttf') format('truetype');
   }
  </script>
 
-<model-viewer src="Scene2.glb" ar ar-scale="fixed" camera-controls touch-action="pan-y" alt="A 3D model of an astronaut" ios-src="Scene2.usdz" xr-environment>
+<model-viewer id="model-viewer" ar ar-scale="fixed" camera-controls touch-action="pan-y" alt="A 3D model of an astronaut" ios-src="Scene.usdz" xr-environment>
   <button slot="ar-button" id="ar-button">
     Смотреть через камеру
   </button>  
