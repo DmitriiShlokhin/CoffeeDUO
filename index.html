@@ -22,14 +22,14 @@ model-viewer {
     transform: translateX(-50%);
     white-space: nowrap;
     top: 0px;
-    padding: 0px 40px 0px 40px;
+    padding: 0px 90px 0px 90px;
     font-family: Roboto Regular, Helvetica Neue, sans-serif;
     font-size: 25px;
-    color:#4285f4;
+    color:#DADCE0;
     height: 50px;
     line-height: 50px;
     border-radius: 50px;
-    border: 1px solid #DADCE0;
+    border: 2px solid #DADCE0;
     
   }
 
@@ -42,24 +42,12 @@ model-viewer {
   }
 
   #ar-button:focus-visible {
-    outline: 1px solid #4285f4;
+    outline: 2px solid #4285f4;
   }
 
 </style>
 
 <model-viewer src="Scene.glb" ar ar-scale="fixed" camera-controls touch-action="pan-y" alt="A 3D model of an astronaut" ios-src="Scene.usdz" xr-environment>
-  {
-      background-color: #FF4500;
-      border: none;
-      color: white;
-      padding: 20px 34px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 20px;
-      margin: 4px 2px;
-      cursor: pointer;
-      }
   <button slot="ar-button" id="ar-button">
         Смотреть на камеры
     </button>
