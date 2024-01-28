@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Все дело в людях</title>
-</head>
 <body>
-
 
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
@@ -56,29 +52,21 @@ src: url('fonts/Montserrat-Regular.ttf') format('truetype');
 <script>
   var currentTime = new Date();
   var currentHour = currentTime.getHours();
-  
+ 
   if (currentHour < 12) {
-   <model-viewer src="Scene.glb" ar ar-scale="fixed" camera-controls touch-action="pan-y" alt="A 3D model of an astronaut" ios-src="Scene.usdz" xr-environment>
-      <button slot="ar-button" id="ar-button">
-        Смотреть через камеру
-      </button>  
-    </model-viewer>
-  } else if (currentHour > 12) {
-   <model-viewer src="Scene1.glb" ar ar-scale="fixed" camera-controls touch-action="pan-y" alt="A 3D model of an astronaut" ios-src="Scene1.usdz" xr-environment>
-      <button slot="ar-button" id="ar-button">
-        Смотреть на камеру
-      </button>  
-    </model-viewer>
-  } else {
-    <model-viewer src="Scene.glb" ar ar-scale="fixed" camera-controls touch-action="pan-y" alt="A 3D model of an astronaut" ios-src="Scene.usdz" xr-environment>
-      <button slot="ar-button" id="ar-button">
-        Смотреть в камеру
-      </button>  
-    </model-viewer>
+   document.querySelector("model-viewer").setAttribute("src", "Scene.glb");
+   document.querySelector("model-viewer").setAttribute("ios-src", "Scene.usdz");
+  }else {
+   document.querySelector("model-viewer").setAttribute("src", "Scene2.glb");
+   document.querySelector("model-viewer").setAttribute("ios-src", "Scene2.usdz");
   }
  </script>
 
+<model-viewer src="" ar ar-scale="fixed" camera-controls touch-action="pan-y" alt="A 3D model of an astronaut" ios-src="" xr-environment>
+  <button slot="ar-button" id="ar-button">
+    Смотреть через камеру
+  </button>  
+</model-viewer>
 
-  
 </body>
 </html>
