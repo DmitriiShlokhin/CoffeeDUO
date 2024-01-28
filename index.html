@@ -30,9 +30,7 @@ model-viewer {
     line-height: 50px;
     border-radius: 50px;
     border: 1px solid #DADCE0;
-    <button slot="ar-button" id="ar-button">
-        Смотреть в камеры
-    </button>
+    
   }
 
   #ar-button:active {
@@ -50,6 +48,9 @@ model-viewer {
 </style>
 
 <model-viewer src="Scene.glb" ar ar-scale="fixed" camera-controls touch-action="pan-y" alt="A 3D model of an astronaut" ios-src="Scene.usdz" xr-environment>
+  <button slot="ar-button" id="ar-button">
+        Смотреть в камеры
+    </button>
     
 </model-viewer>
   
