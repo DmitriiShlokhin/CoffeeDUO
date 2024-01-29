@@ -4,16 +4,24 @@
  <title>Все дело в людях</title>
 </head>
 <body>
-<style>
+style>
     body {
       background-color: #abccea;
-      background-color: 100px;
       background-image: url('image.jpg');
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 100px;
     }
+    
+    /* фон меньше 100px будет белым */
+    @media (max-width: 100px) {
+      body {
+        background-color: #fff;
+        background-size: 100px;
+      }
+    }
   </style>
+
 
 
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
