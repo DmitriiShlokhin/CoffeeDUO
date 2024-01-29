@@ -1,12 +1,68 @@
 <!DOCTYPE html>
 <html>
-<head>
- <title>Все дело в людях</title>
-</head>
 <body>
-a href="https://ayabureau.com/duo" target="_blank">
+<style>
+    body {
+      background-color: #fff;
+      
+    }
+</style>
+
+
+
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+<style>
+model-viewer {
+  width: 100vw;
+  height: 75vh;
+}
+@font-face {
+font-family: 'Montserrat';
+src: url('https://dmitriishlokhin.github.io/CoffeeDUO/MabryPro-Light.ttf') format('truetype');
+}
+
+#ar-button {
+
+  background-color: #abccea;
+  border: 0px solid #abccea;
+  border-radius: 100px;
+  color: #fff;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight:  lighter;
+  padding: 15px 25px 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  transform: translateX(-50%);
+  position: absolute;
+  background-position: 0px;
+  top: 80%;
+  left: 50%;
+  white-space: nowrap;  
+  }
+
+ 
+
+  #ar-button:focus {
+    outline: none;
+  }
+
+  #ar-button:focus-visible {
+    outline: 2px solid #4285f4;
+  }
+</style>
+
+  <button slot="ar-button" id="ar-button">
+      <img  srcset="https://dmitriishlokhin.github.io/CoffeeDUO/ar.svg 80h" src="https://dmitriishlokhin.github.io/CoffeeDUO/ar.svg">
+   Смотреть через камеру
+  </button>  
+
+<a href="https://ayabureau.com/duo" target="_blank">
   <button>Перейти на сайт</button>
 </a>
+
 
 </body>
 </html>
